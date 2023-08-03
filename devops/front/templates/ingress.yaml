@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.ingress.name }}
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: "letsencrypt-dev"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/add-base-url: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.org/server-snippets: |
+      location / {
+        return 302 /coffee;
+      }  
+spec:
+  tls:
+  - hosts:
+    - robosell.uz
+    secretName: front-tls
+  rules:
+  - host: robosell.uz
+    http:
+      paths:
+        {{- range .Values.ingress.hosts }}
+        - path: {{ .path }}
+          pathType: Prefix
+          backend:
+            service:
+              name: {{ .service.name }}
+              port: 
+                number: {{ .service.port }}
+        {{- end }}

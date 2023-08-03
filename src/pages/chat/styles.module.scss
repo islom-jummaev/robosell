@@ -1,0 +1,471 @@
+@use "sass:map";
+
+.chatWrap {
+  display: flex;
+  justify-content: space-between;
+  min-height: 400px;
+  height: 100%;
+  gap: 5px;
+}
+
+.chatLeft {
+  display: flex;
+  flex-direction: column;
+  width: 318px;
+  min-width: 318px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0 0 20px;
+}
+
+.chatListSearch {
+  border-bottom: 1px solid $bg-secondary;
+
+  :global(.custom-input.search) {
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: 27px 18px;
+    cursor: text;
+  }
+}
+
+.chatListFilter {
+  display: flex;
+  border-bottom: 1px solid $bg-secondary;
+  padding: 15px;
+  gap: 20px;
+  font-size: 14px;
+
+  .chatListFilterItem {
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover, &.chatListFilterItemActive {
+      color: $primary
+    }
+  }
+}
+
+.chatList {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.chatListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 8px 10px 15px;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #f6f6ff;
+  }
+
+  &.active {
+    background: #f6f6ff;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.chatListItemBack {
+  display: none;
+}
+
+.chatListItemNameWrap {
+  flex-grow: 1;
+  max-width: 100%;
+  overflow: hidden;
+
+  .chatListItemName {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 3px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .chatListItemLastMessage {
+    color: #363740;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    min-height: 15px;
+  }
+}
+
+.chatListItemVisit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 33px;
+  min-width: 33px;
+
+  .chatListItemTime {
+    display: flex;
+    align-items: flex-end;
+    min-height: 17px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+
+  .chatListItemMessageStatus {
+    min-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .chatListItemMessageRead {
+      color: $primary;
+
+      svg {
+        width: 14px;
+        height: 9px;
+      }
+
+      svg + svg {
+        margin-left: -8px;
+      }
+    }
+
+    :global(.ant-badge .ant-badge-count) {
+      height: 16px;
+      min-width: 17px;
+      line-height: 16px;
+      font-size: 10px;
+    }
+  }
+}
+
+.chatListItemPic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:not(.emptyPic) {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.emptyPic {
+  background-color: $bg-secondary;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.chatRight {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.chatEmptyWr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.chatEmpty {
+  background-color: $bg-secondary;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.chatHead {
+  border-bottom: 1px solid $bg-secondary;
+
+  .chatListItem {
+    cursor: default;
+    padding-right: 16px;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  .online {
+    color: $primary;
+  }
+
+  .chatHeadActions {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $bg-secondary;
+      padding: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      color: $primary;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #fff;
+        background: $primary;
+      }
+    }
+  }
+}
+
+.chatAreaWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chatArea {
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0 4px 16px 0;
+}
+
+.chatAreaMessageMineWrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.chatAreaMessageMineWrap + .chatAreaMessageForMeWrap {
+  margin-top: 16px;
+}
+
+.chatAreaMessageForMeWrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 6px;
+}
+
+.chatAreaMessageForMeWrap + .chatAreaMessageMineWrap {
+  margin-top: 16px;
+}
+
+
+.chatAreaMessageItem {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 12px 44px 29px 16px;
+  max-width: 85%;
+  min-width: 96px;
+  box-sizing: border-box;
+
+  &.chatAreaMessageMine {
+    color: #fff;
+    background: $primary;
+    border-radius: 16px 16px 0 16px;
+
+    .chatAreaMessageFile {
+      a {
+        color: #fff;
+      }
+    }
+
+    .chatAreaMessageFileIcon {
+      color: $primary;
+      background: $bg-secondary;
+    }
+
+    .chatAreaMessageVideoFile {
+      :global(.custom-spinner) div:after {
+        background: $bg-secondary;
+      }
+    }
+  }
+
+  &.chatAreaMessageForMe {
+    border-radius: 16px 16px 16px 0;
+    background: $bg-secondary;
+
+    .chatAreaMessageFileIcon {
+      color: $bg-secondary;
+      background: $primary;
+    }
+
+    .chatAreaMessageFile {
+      a {
+        color: #000;
+      }
+    }
+  }
+
+  &.chatAreaMessageImageItem {
+    padding: 0 0 29px;
+    overflow: hidden;
+
+    .chatAreaMessageText {
+      padding-left: 16px;
+      padding-right: 44px;
+    }
+  }
+
+  .chatAreaMessageTime {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+  }
+}
+
+.chatAreaMessageFile {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+  }
+}
+
+.chatAreaMessageImageFile {
+  font-size: 0;
+  cursor: pointer;
+  padding: 0 0 10px;
+
+  img {
+    max-width: 400px;
+  }
+
+  :global(.ant-image-mask) {
+    display: none;
+  }
+}
+
+.chatAreaMessageVideoFile {
+  video {
+    max-width: 500px;
+  }
+}
+
+.chatAreaMessageFileIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hasFile {
+  padding-top: 10px;
+}
+
+.messageDate {
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  background: #eeeded;
+  width: auto;
+  margin: 10px auto 0;
+}
+
+.chatFormWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: $bg-secondary;
+  border-radius: 20px;
+
+  .chatFormText {
+    flex-grow: 1;
+  }
+
+  :global(textarea.ant-input) {
+    border: none;
+    background: none;
+    padding: 19px 26px;
+    box-shadow: none;
+    font-size: 16px;
+  }
+
+  .chatFormActions {
+    display: flex;
+    min-width: 88px;
+    gap: 5px;
+    padding: 0 0 12px 0;
+
+    :global(.custom-btn) {
+      background: none;
+      padding: 5px 8px;
+      border: none;
+      color: $primary;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .chatWrap {
+    max-height: 500px;
+  }
+
+  .chatWrapEmpty {
+    .chatRight {
+      display: none;
+    }
+
+    .chatLeft {
+      width: 100%;
+    }
+  }
+
+  .chatWrapOpened {
+    .chatLeft {
+      display: none;
+    }
+  }
+
+  .chatListItemBack {
+    display: block;
+
+  }
+}

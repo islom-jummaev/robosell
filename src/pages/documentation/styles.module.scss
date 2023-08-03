@@ -1,0 +1,118 @@
+@use "sass:map";
+
+.docStepWrap {
+  font-size: 14px;
+
+  img {
+    max-width: 100%;
+  }
+
+  & > h2 {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 16px;
+  }
+
+  ol {
+    padding: 0 0 0 40px;
+
+    li {
+      margin: 0 0 14px;
+    }
+
+    &.categoryOl {
+      padding-left: 54px;
+    }
+  }
+
+  code {
+    color: #e83e8c;
+    word-break: break-word;
+    cursor: pointer;
+  }
+}
+
+.docContent {
+  padding: 0 0 0 40px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 8px;
+  }
+
+  ul {
+    padding: 5px 0 0 40px;
+
+    li {
+      margin: 4px 0;
+    }
+  }
+
+  img {
+    margin-top: 10px;
+  }
+}
+
+.docContentItem {
+  min-height: 1px;
+  margin: 0 0 10px;
+}
+
+.docStepPic {
+  padding-top: 16px;
+}
+
+.note {
+  display: block;
+  color: #a52a2a;
+  font-style: italic;
+  margin-top: 3px;
+}
+
+.docStepBtns {
+  padding: 0 0 0 40px;
+  display: flex;
+  gap: 15px;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: $primary;
+
+    svg {
+      width: 8px;
+      height: 8px;
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      color: #2F2B9D;
+    }
+  }
+
+  span.prev {
+    svg {
+      transform: rotate(0);
+    }
+  }
+}
+
+.webappPics {
+  display: flex;
+  font-size: 0;
+  gap: 5px;
+
+  img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .docContent {
+    padding: 0;
+  }
+}

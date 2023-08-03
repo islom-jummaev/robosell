@@ -1,0 +1,83 @@
+@use "sass:map";
+
+.custom-status {
+  position: relative;
+  border-radius: 16px;
+  padding: 6px 12px;
+  min-width: 110px;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  line-height: 17px;
+  z-index: 1;
+  background: $bg-primary;
+  max-width: 150px;
+
+  &.primary {
+    background: $bg-primary;
+  }
+
+  &.success {
+    background: #22B022;
+  }
+
+  &.pending {
+    background: #FBB700;
+  }
+
+  &.danger {
+    background: #FF3535;
+  }
+
+  &.aqua {
+    background: #13D8B4;
+  }
+
+  &.blue {
+    background: #428BC1;
+  }
+
+  &.dark {
+    background: #666666;
+  }
+}
+
+.status-update-wrap {
+  cursor: pointer;
+  width: 150px;
+
+  .ant-skeleton-button {
+    height: 29px;
+  }
+
+  .custom-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      svg {
+        transform: rotate(270deg);
+        width: 15px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+.status-update-content {
+  position: relative;
+  width: 150px;
+  min-height: 38px;
+
+  &__item {
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $bg-secondary;
+    }
+  }
+}

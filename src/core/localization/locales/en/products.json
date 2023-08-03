@@ -1,0 +1,14 @@
+{
+  "title": "Products",
+  "created": "Product created",
+  "deleted": "Product deleted",
+  "positionChanged": "Position updated",
+  "create": "Product create",
+  "about_product": "About product",
+  "add_units": "You must add at least one unit of measure",
+  "status": {
+    "unlimited": "Unlimited",
+    "limited": "Limited",
+    "not_available": "Not available"
+  }
+}

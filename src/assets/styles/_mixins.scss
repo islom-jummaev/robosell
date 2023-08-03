@@ -1,0 +1,12 @@
+@mixin font($fsize: 1rem, $fweight: 500) {
+  font-size: $fsize;
+  font-weight: $fweight !important;
+  @content;
+}
+
+@mixin flex($fgap: 0 8px) {
+  display: flex;
+  align-items: center;
+  gap: $fgap;
+  @content;
+}

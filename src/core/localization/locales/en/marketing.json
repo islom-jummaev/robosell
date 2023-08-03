@@ -1,0 +1,31 @@
+{
+  "mailing": {
+    "title": "Mailing",
+    "create": "Create mailing",
+    "created": "Mailing created",
+    "deleted": "Mailing deleted",
+    "send": "Mailing sent",
+    "timeAdded": "The time is set",
+    "setTime": "Schedule a time",
+    "copy": "Mailing duplicated"
+  },
+  "source": {
+    "title": "Sources",
+    "create": "Create source",
+    "created": "Source created",
+    "deleted": "Source deleted"
+  },
+  "news": {
+    "title": "News",
+    "create": "Create news",
+    "created": "News created",
+    "deleted": "News deleted"
+  },
+  "buttons": "Buttons",
+  "noButtons": "No",
+  "duplicate": "Duplicate",
+  "publicateNow": "Publish now",
+  "sent": "Отправлено",
+  "notSent": "Не отправлено",
+  "totalClicks": "Всего кликов"
+}

@@ -1,0 +1,59 @@
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.col {
+  width: 48%;
+}
+
+.headPanel {
+  text-align: right;
+  height: 64px;
+}
+
+.select {
+  margin: 0 0 20px;
+}
+
+.treeWrap {
+
+}
+
+.tree {
+  padding: 0 0 0 20px;
+}
+
+.treeParent {
+  font-weight: bold;
+}
+
+.treeItem {
+  margin: 0 0 4px;
+}
+
+.treeItemVal {
+  cursor: pointer;
+
+  &:hover {
+    color: #6662f4;
+  }
+}
+
+.notTranslated {
+  & span {
+    color: red;
+  }
+}
+
+.treeSubItem {
+  & .treeSubItem {
+    padding: 0 0 0 20px;
+  }
+
+  & .treeItem {
+    padding: 0 0 0 10px;
+  }
+}

@@ -1,0 +1,39 @@
+@use "sass:map";
+
+.botCreateForm {
+  background: #fff;
+  padding: 24px 16px 16px;
+  border: 1px solid $primary;
+  border-radius: 16px;
+
+  :global(.custom-input) {
+    border-color: transparent;
+    padding: 12px 16px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  :global(.custom-btn) {
+    height: 40px;
+    font-size: 17px;
+  }
+}
+
+.description {
+  padding: 40px 0 0;
+  font-size: 15px;
+}
+
+.descriptionList {
+  padding: 0 0 0 35px;
+
+  a {
+    color: #428bfa;
+  }
+
+  code {
+    font-size: 87.5%;
+    color: #e83e8c;
+    word-break: break-word;
+  }
+}

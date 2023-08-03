@@ -1,0 +1,23 @@
+front:
+  name: robosell-front
+  replicaCount: 1
+  imagePullSecrets:
+    - name: do-registry
+  container:
+    image: registry.digitalocean.com/roboreggistry/front:latest
+    port: 5173
+
+
+service:
+  name: front-service
+  group: front
+  type: ClusterIP
+  port: 80
+
+ingress:
+  name: ingress-front
+  hosts:
+    - path: /
+      service:
+        name: front-service
+        port: 80

@@ -1,0 +1,126 @@
+@use "sass:map";
+
+.custom-modal-wrap {
+  max-height: 100%;
+  padding: 20px 0 40px;
+}
+
+.custom-modal {
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  div:global(.ant-modal-content) {
+    overflow: hidden;
+    flex-grow: 1;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 14px 14px 24px;
+    box-shadow: 0 15px 30px rgb(0 0 0 / 16%);
+    background: $bg-secondary;
+    display: flex;
+    flex-direction: column;
+  }
+
+  div:global(.ant-modal-body) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-x: auto;
+    padding: 0 10px 0 10px;
+  }
+
+  button:global(.ant-modal-close) {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    top: 10px;
+
+    span:global(.ant-modal-close-x) {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      color: #363740;
+    }
+  }
+
+  &__header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 24px;
+    padding-top: 10px;
+
+    & .custom-modal__title {
+      margin-bottom: 0;
+      font-size: 18px;
+      font-weight: 500;
+      min-height: 24px;
+    }
+
+    :global(.cancelBtnWr) {
+      font-size: 0;
+      line-height: 0;
+
+      :global(.custom-btn) {
+        color: #363740;
+        font-size: 0;
+        line-height: 0;
+        border: none;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        background: none;
+
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    flex-shrink: 0;
+    margin: 40px 0 0;
+    overflow: hidden;
+  }
+
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 24px;
+  }
+
+  &__middle {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 10px 0 10px;
+    margin: 0 -10px 0 -10px;
+  }
+
+  &__buttons {
+  }
+
+  &__error {
+    margin: 0 0 20px;
+  }
+
+  & .ant-form-item {
+    margin-bottom: 14px;
+
+    & .ant-form-item {
+      margin: 0;
+    }
+  }
+
+  & iframe {
+    border: none;
+  }
+}

@@ -1,0 +1,38 @@
+@use "sass:map";
+
+.langItems {
+  border: 1px solid $primary;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  display: inline-flex;
+  min-height: 32px;
+
+  .langItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-right: 1px solid $primary;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .active {
+    background: $primary;
+    color: #fff;
+  }
+}
+
+@media (max-width: 480px) {
+  .langItems {
+    .langItem {
+      font-size: 12px;
+      padding: 5px 5px;
+    }
+  }
+}

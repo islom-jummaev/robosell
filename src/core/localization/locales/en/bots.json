@@ -1,0 +1,76 @@
+{
+  "botList": "List of bots",
+  "createBot": "Create telegram bot",
+  "addBot": "Create bot",
+  "bots": "Bots",
+  "botSettings": "Bot settings",
+  "addonSetting": "Additional settings",
+  "forExample": "For example",
+  "startText": "Initial text",
+  "startInfo": "This text appears when you press /start for the first time",
+  "addonInfo": "Additional information",
+  "addonInfoText": "Your contacts and accounts in social networks. You can also leave information about yourself",
+  "autoSend": "Auto answer",
+  "autoSendText": "This section is for automatically replying to users when they write a message to the bot.",
+  "botCreated": " Bot created",
+  "pickup": "Pickup",
+  "general": {
+    "title": "General",
+    "description": {
+      "title": "Redirecting orders to the Telegram group. If you want notifications about new orders from your store to be sent to a specific telegram group, follow the steps below:",
+      "step1": "Add your bot to the group and give admin rights",
+      "step2": "Copy this token: <1>{{token}}</1> and send to the group",
+      "step3": "The bot will understand that you want to set up notifications and will respond"
+    }
+  },
+  "lang": {
+    "title": "Language",
+    "langText": "For additional convenience of users of the bot, you can make it multilingual."
+  },
+  "delivery": {
+    "title": "Delivery",
+    "labels": {
+      "deliveryPrice": "Delivery price per km",
+      "maxKm": "Maximum km for delivery",
+      "serviceType": "Services",
+      "country": "Country",
+      "city": "City"
+    },
+    "placeholders": {
+      "freeKm": "Number of free kilometers",
+      "delivery_custom_text": "For example: Delivery is carried out by the Millenium taxi service and is paid separately"
+    },
+    "maps": "Maps",
+    "mapDescription": "When customers place an order, we determine the distance between the customer and you based on the address you enter on this card."
+  },
+  "payment": {
+    "title": "Payment"
+  },
+  "settings": {
+    "title": "Settings",
+    "reload": {
+      "title": "Restart the bot",
+      "text": "In this section, you can restart the bot without any data being affected."
+    },
+    "stop": {
+      "title": "Stop the bot",
+      "text": " In this section, you can stop the bot without affecting any data."
+    },
+    "delete": {
+      "title": "Delete bot",
+      "text": "Please note that if you delete the bot, all data (categories, products, users, etc.) will be deleted."
+    }
+  },
+  "statuses": {
+    "active": "Connected",
+    "inActive": "Disconnected"
+  },
+  "instruction": {
+    "title": "Instruction",
+    "botFatherLink": "Contact the <1>@BotFather</1> bot on Telegram",
+    "command": "Use the <1>/newbot</1> command to create a new bot",
+    "userName": "Specify bot name and username",
+    "message": "In response, @BotFather will send a token like: <1>238279964:AAFE6-1ZuCAcEOUPa63XlLxxq9qYU1iYdbs</1>",
+    "name": "Enter it in the field."
+  }
+}

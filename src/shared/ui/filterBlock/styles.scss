@@ -1,0 +1,43 @@
+.filter-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 0 -10px;
+
+  &__item {
+    min-width: 230px;
+    max-width: 230px;
+    margin: 5px 0 7px 15px;
+
+    & .ant-select {
+      width: 100%;
+    }
+  }
+
+  &__buttons {
+    margin: 0 0 0 20px;
+
+    & .custom-btn + .custom-btn {
+      margin: 0 0 0 10px;
+    }
+  }
+
+  &__item-search {
+    flex-grow: 1;
+    max-width: 350px;
+    min-width: 350px;
+
+    .custom-input {
+      cursor: text;
+      background: #fff;
+      border-color: $bg-secondary;
+      padding: 12px 11px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-block__item-search {
+    min-width: 0;
+  }
+}

@@ -1,0 +1,24 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  TAG: registry.digitalocean.com/roboreggistry/front:latest
+  TOKEN: dop_v1_bf895121a0ef640404d5e1026a24403697d99ad2ff872cb3c8297e85856e55c0
+
+build:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - echo "{\"auths\":{\"registry.digitalocean.com/roboreggistry\":{\"username\":\"$TOKEN\",\"password\":\"$TOKEN\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile Dockerfile --destination $TAG
+
+deploy:
+  stage: deploy
+  image: dtzar/helm-kubectl
+  before_script:
+    - kubectl --kubeconfig=devops/k8s-config.yaml get nodes
+  script:
+    - helm upgrade -i --namespace ingress-nginx --recreate-pods --kubeconfig devops/k8s-config.yaml -f devops/front/front.yaml front devops/front/

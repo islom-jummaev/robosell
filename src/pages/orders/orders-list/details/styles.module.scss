@@ -1,0 +1,28 @@
+@use "sass:map";
+
+.orderDetails {
+  min-height: 550px;
+}
+
+.orderDetailsItem {
+  line-height: 35px;
+  font-size: 15px;
+}
+
+.orderDetailsProducts {
+  border-top: 1px solid #aba9fa;
+  border-bottom: 1px solid #aba9fa;
+  padding: 16px 0;
+  margin: 10px 0;
+}
+
+.orderProductItem {
+  padding: 0 0 0 30px;
+  font-size: 15px;
+  line-height: 35px;
+
+  span {
+    font-weight: bold;
+    color: $primary;
+  }
+}

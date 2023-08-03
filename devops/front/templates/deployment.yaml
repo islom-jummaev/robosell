@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.front.name }}
+  labels:
+    app: {{ .Values.front.name }}
+spec:
+  replicas: {{ .Values.front.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.front.name }}
+  template:
+    metadata:
+        labels:
+          app: {{ .Values.front.name }}
+    spec:
+      {{- with .Values.front.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Values.front.name }}
+          image: {{ .Values.front.container.image }}
+          ports:
+            - name: front-http
+              containerPort: {{ .Values.front.container.port }}
+              protocol: TCP
+         

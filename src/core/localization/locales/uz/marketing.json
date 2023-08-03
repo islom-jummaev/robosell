@@ -1,0 +1,31 @@
+{
+  "mailing": {
+    "title": "E'lonlar",
+    "create": "E'lon Yaratish",
+    "created": "E'lon yaratildi",
+    "deleted": "E'lon olib tashlandi",
+    "send": "E'lon yuborildi",
+    "timeAdded": "Vaqt belgilandi",
+    "setTime": "Vaqtni belgilang",
+    "copy": "E'lon dublikatlangan"
+  },
+  "source": {
+    "title": "Manbalar",
+    "create": "Manba yaratish",
+    "created": "Manba yaratildi",
+    "deleted": "Manba olib tashlandi"
+  },
+  "news": {
+    "title": "Yangiliklar",
+    "create": "Yangilik yaratish",
+    "created": "Yangilik yaratildi",
+    "deleted": "Yangilik olib tashlandi"
+  },
+  "buttons": "Tugmalar",
+  "noButtons": "Yo'q",
+  "duplicate": "Nusxa olish",
+  "publicateNow": "Hozir yuborish",
+  "sent": "Отправлено",
+  "notSent": "Не отправлено",
+  "totalClicks": "Всего кликов"
+}

@@ -1,0 +1,6 @@
+runners:
+  config: |
+    [[runners]]
+      [runners.kubernetes]
+        privileged = true
+        image = "ubuntu:22.04"

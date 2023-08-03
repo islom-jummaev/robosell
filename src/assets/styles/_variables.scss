@@ -1,0 +1,33 @@
+$primary: #6662f4;
+$bg-primary: linear-gradient(180deg, #7d79ff 0%, #5d59f0 108.33%);
+$bg-primary-hover: linear-gradient(180deg, #2F2B9D 0%, #5D59F0 108.33%);
+$bg-secondary: #eeeeff;
+$bg-light: #fff;
+$light: #fff;
+$text-gray: #9f9d9d;
+$dark: #000;
+$danger: #F32424;
+$rounded-xs: 4px;
+$rounded-sm: 8px;
+$rounded-md: 16px;
+$rounded-lg: 20px;
+$rounded-xlg: 24px;
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 330px,
+  sm: 540px,
+  md: 720px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1440px,
+  xlg: 1660px,
+);
+
+$column-map: (
+  sm: 2,
+  md: 3,
+  lg: 4,
+  xl: 4,
+  2xl: 4,
+);

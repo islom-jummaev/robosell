@@ -1,0 +1,76 @@
+{
+  "botList": "Botlar ro'yxati",
+  "createBot": "Telegram bot yaratish",
+  "addBot": "Bot yaratish",
+  "bots": "Botlar",
+  "botSettings": "Bot sozlamalari",
+  "addonSetting": "Qo'shimcha sozlamalar",
+  "forExample": "Masalan",
+  "startText": "Boshlang'ich matn",
+  "startInfo": "Ushbu matn /start tugmasini birinchi marotaba bosganingizda paydo bo'ladi",
+  "addonInfo": "Qo'shimcha ma'lumot",
+  "addonInfoText": "Ijtimoiy tarmoqlardagi kontaktlaringiz va akkauntlaringiz. O'zingiz haqingizda ham ma'lumot qoldirishingiz mumkin",
+  "autoSend": "Avtomatik javob",
+  "autoSendText": "Bu bo'lim foydalanuvchilarga botga xabar yozganlarida avtomatik javob berish uchun mo'ljallangan.",
+  "botCreated": "Bot yaratildi",
+  "pickup": "Olib ketish",
+  "general": {
+    "title": "Umumiy",
+    "description": {
+      "title": "Buyurtmalarni Telegram guruhiga yo'naltirish. Doʻkoningizdan yangi buyurtmalar haqidagi bildirishnomalar maʼlum bir telegram guruhiga yuborilishini istasangiz, quyidagi amallarni bajaring:",
+      "step1": "Botingizni kerakli guruhga qo'shing va administrator huquqlarini bering",
+      "step2": "Ushbu tokendan nusxa oling: <1>{{token}}</1> va guruhga yuboring",
+      "step3": "Bot bildirishnomalarni o'rnatmoqchi ekanligingizni tushunadi va javob beradi"
+    }
+  },
+  "lang": {
+    "title": "Til",
+    "langText": "Bot foydalanuvchilariga qo'shimcha qulaylik yaratish uchun uni ko'p tilli qilish mumkin."
+  },
+  "delivery": {
+    "title": "Yetkazib berish",
+    "labels": {
+      "deliveryPrice": "Km uchun etkazib berish narxi",
+      "maxKm": "Yetkazib berish uchun maksimal km",
+      "serviceType": "Xizmat turlari",
+      "country": "Mamlakat",
+      "city": "Shaxar"
+    },
+    "placeholders": {
+      "freeKm": "Bepul kilometrlar soni",
+      "delivery_custom_text": "Masalan: Yetkazib berish Millenium taksi xizmati tomonidan amalga oshiriladi va alohida to'lanadi"
+    },
+    "maps": "Xaritalar",
+    "mapDescription": "Mijozlar buyurtma berganida, biz mijoz bilan siz o'rtasidagi masofani ushbu kartaga kiritgan manzilingizga qarab aniqlaymiz."
+  },
+  "payment": {
+    "title": " To'lov"
+  },
+  "settings": {
+    "title": "Sozlamalar",
+    "reload": {
+      "title": "Botni qayta ishga tushirish",
+      "text": "Ushbu bo'limda siz hech qanday ma'lumotlarga ta'sir qilmasdan botni qayta ishga tushirishingiz mumkin."
+    },
+    "stop": {
+      "title": "Botni to'xtatish",
+      "text": "Ushbu bo'limda siz hech qanday ma'lumotlarga ta'sir qilmasdan botni to'xtatishingiz mumkin."
+    },
+    "delete": {
+      "title": "Botni o'chirib yuborish",
+      "text": "E'tibor bering, agar siz botni o'chirsangiz, barcha ma'lumotlar (toifalar, mahsulotlar, foydalanuvchilar va boshqalar) o'chiriladi."
+    }
+  },
+  "statuses": {
+    "active": "Ulangan",
+    "inActive": "O‘chirilgan"
+  },
+  "instruction": {
+    "title": "Ko'rsatma",
+    "botFatherLink": "Telegramdagi <1>@BotFather</1> boti bilan bog'laning",
+    "command": "<1>/newbot</1> buyrug'i orqali yangi bot yarating",
+    "userName": "Bot nomi va username ini kiriting",
+    "message": "Javob tariqasida @BotFather sizga token yuboradi: <1>238279964:AAFE6-1ZuCAcEOUPa63XlLxxq9qYU1iYdbs</1>",
+    "name": "Tokenni tepadagi maydonga qo'ying."
+  }
+}

@@ -1,0 +1,158 @@
+@use "sass:map";
+
+.tableLayout {
+  z-index: 1;
+  position: relative;
+
+  :global(.ant-table-content) {
+    overflow: auto;
+  }
+}
+
+.tableWr {
+  width: 100%;
+
+  div:global(.ant-table) {
+    border-radius: 16px;
+  }
+
+  div:global(.ant-table-container) {
+    border: none !important;
+  }
+
+  thead:global(.ant-table-thead) {
+    & > tr > th:first-child {
+      border-radius: 0 0 0 16px;
+    }
+
+    & > tr > th:last-child, & > tr > td:last-child {
+      border-radius: 0 0 16px 0;
+    }
+
+    th:global(.ant-table-cell), td:global(.ant-table-cell) {
+      background-color: $bg-secondary;
+      font-weight: 600;
+      font-size: 14px;
+      color: #000;
+      border: none !important;
+      padding: 21px 16px 21px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    th {
+      :global(.ant-select) {
+        width: 100%;
+
+        :global(.ant-select-selector) {
+          background: none;
+          border: none;
+          border-radius: 0;
+          border-bottom: 1px solid #929fba !important;
+          box-shadow: none !important;
+        }
+      }
+
+      :global(.ant-picker) {
+        background: none;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #929fba !important;
+        box-shadow: none !important;
+      }
+
+      :global(.custom-input) {
+        background: none;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #929fba !important;
+        box-shadow: none !important;
+        padding: 7px 6px 6px;
+
+        :global(.ant-input-prefix), :global(.ant-input-suffix) {
+          display: none;
+        }
+      }
+
+      :global(.empty-height) {
+        height: 36px;
+      }
+    }
+  }
+
+  td:global(.ant-table-cell) {
+    color: #000;
+    border: none !important;
+  }
+
+  tr:global(.ant-table-row) {
+
+    &:hover {
+      td:global(.ant-table-cell) {
+        background: #fbfbfb;
+      }
+    }
+  }
+
+  :global(.table-actions-btns) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  :global(.align-center) {
+    margin: 0 auto;
+  }
+
+  :global(.table-photo) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $bg-secondary;
+
+    img {
+      object-fit: cover;
+      width: 40px;
+      height: 40px;
+    }
+
+    :global(.ant-image-mask-info) {
+      font-size: 0;
+
+      span {
+        font-size: 15px;
+        margin: 0 !important;
+      }
+    }
+
+    :global(.table-photo__user) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  :global(.table-photo.withoutbg) {
+    background: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .tableLayout {
+    background: #fff;
+    border-radius: 16px;
+
+    :global(.ant-table-content) {
+      table {
+        table-layout: initial !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+@use "sass:map";
+
+.custom-form {
+  .ant-form-item {
+    label {
+      font-size: 16px;
+      font-weight: 500;
+      color: #000;
+    }
+
+    .ant-form-item-extra {
+      color: #C4C4C4;
+      font-size: 12px;
+      padding-top: 6px;
+    }
+
+    .ant-picker, textarea, .ant-select-selector, .ant-input-number {
+      background: #F4F4FB;
+      width: 100%;
+    }
+
+    .ant-input-number-disabled {
+      background: #efefef;
+      border-color: #efefef;
+    }
+
+    .ant-picker-suffix {
+      color: $primary;
+    }
+
+    .ant-checkbox-inner {
+      border-radius: 4px;
+    }
+  }
+
+  .form-list-wrap {
+    margin: 0 0 15px;
+
+    .form-list-head {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+
+    .ant-row {
+      margin-bottom: 10px;
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .form-list-btn {
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .form-list-product-row {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      gap: 15px;
+
+      .custom-input {
+        cursor: default;
+        border: none;
+        background: none;
+        font-weight: bold;
+        box-shadow: none;
+        padding-left: 0;
+      }
+
+      &__left {
+        font-weight: bold;
+      }
+
+      &__right {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        min-width: 352px;
+
+        .amount-btn-wr {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding: 3px;
+          border-radius: 16px;
+          background: #fff;
+          border: 1px solid $primary;
+
+          .amount-btn {
+            padding: 2px 7px 4px;
+            width: 32px;
+            border: none;
+            font-weight: bold;
+            background: $bg-secondary;
+            height: auto;
+          }
+
+          .amount-input {
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+
+        .form-list-delete-row {
+          width: 36px;
+          height: 36px;
+
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-form-item-explain-error {
+    color: #ff4d4f;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-form {
+    .ant-row {
+      flex-direction: column;
+
+      .ant-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

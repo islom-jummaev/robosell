@@ -1,0 +1,140 @@
+@use "sass:map";
+
+.login {
+  position: relative;
+  background-image: url("/main-bg.jpg");
+  min-height: 100vh;
+  @include flex(0);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  :global(.language-select) {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+  &__block {
+    max-width: 620px;
+    width: 370px;
+    background-color: $light;
+    border-radius: $rounded-xlg;
+    margin: auto;
+    padding: 13rem 10rem 10rem 18.2rem;
+    position: relative;
+
+    input:global(.custom-input) {
+      height: 48px;
+      border-color: transparent;
+      background: $bg-secondary;
+
+      &:hover, &:focus {
+        border-color: #968fff;
+      }
+    }
+
+    span:global(.custom-input) {
+      background: none;
+
+      input {
+        height: 48px;
+        border-color: transparent;
+        background: $bg-secondary;
+
+        &:hover, &:focus {
+          border-color: #968fff;
+        }
+      }
+    }
+
+    .logoMain {
+      position: absolute;
+      left: -9.5rem;
+      top: 15%;
+      display: flex;
+      align-items: center;
+      width: 256px;
+      height: 341px;
+      background: $bg-secondary;
+      border-radius: 24px;
+      padding: 5px 15px 25px;
+      box-sizing: border-box;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .logoMob {
+      position: absolute;
+      text-align: center;
+
+      @media (max-width: map.get($grid-breakpoints, "lg")) {
+        max-width: 200px;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 2rem auto 0;
+      }
+    }
+
+    @media (max-width: map.get($grid-breakpoints, "lg")) {
+      max-width: 360px;
+      padding: 2rem;
+    }
+  }
+
+  h4 {
+    @include font(2.4rem, 700);
+  }
+
+  a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    background: $primary;
+    border-radius: $rounded-lg 0 $rounded-lg 0;
+    color: $light;
+    @include font(1.2rem, 500)
+  }
+}
+
+.login-form {
+  @media (max-width: map.get($grid-breakpoints, "lg")) {
+    margin-top: 10rem;
+  }
+
+  form {
+    margin: 1.6rem 0;
+  }
+
+  p {
+    @include font(1.4rem);
+    margin-bottom: 1.6rem;
+  }
+
+  .span {
+    color: #003ccf;
+    cursor: pointer;
+    @include font(1.4rem);
+  }
+}
+
+.register-form {
+  form {
+    margin: 1.6rem 0;
+  }
+
+  p {
+    @include font(1.4rem);
+    margin-bottom: 1.6rem;
+  }
+
+  .span {
+    color: #003ccf;
+    cursor: pointer;
+    @include font(1.4rem);
+  }
+
+}

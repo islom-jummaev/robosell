@@ -1,0 +1,54 @@
+@use "sass:map";
+
+.linksWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  :global(.custom-btn) {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    padding: 7px 25px;
+    height: auto;
+    background: $bg-secondary;
+    box-shadow: 0 0 7px rgba(102, 98, 244, 0.4);
+    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.dateButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  :global(.custom-btn) {
+    border-radius: 16px;
+  }
+}
+
+.scheduleDate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  padding: 0 15px;
+}
+
+:global(.mailing-photo) {
+  :global(.ant-image-img) {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scheduleDate {
+    font-size: 14px;
+  }
+}

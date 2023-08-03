@@ -1,0 +1,53 @@
+@use "sass:map";
+
+.currentBotList {
+  font-size: 17px;
+  line-height: 27px;
+  font-family: 'Inter', sans-serif;
+}
+
+.currentBotPopupName {
+  display: none;
+  padding: 10px 16px 0;
+  font-weight: bold;
+}
+
+.currentBotListItem {
+  padding: 7px 0 7px 78px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-weight: 400;
+
+  &:hover {
+    color: $primary;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 2px;
+  }
+}
+
+.currentBotListHiddenItem {
+  display: none;
+}
+
+:global(.ant-menu-submenu-popup .left-menu-bot-popup) {
+  height: auto !important;
+  background: none !important;
+  padding: 0 !important;
+
+  .currentBotPopupName {
+    display: block;
+  }
+
+  .currentBotListItem {
+    padding: 10px 16px;
+    margin: 0;
+  }
+}

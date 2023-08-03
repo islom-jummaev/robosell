@@ -1,0 +1,162 @@
+@use "sass:map";
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  font-size: 20px;
+  line-height: 1.1;
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 48px;
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.ant-btn-icon-only {
+    padding: 5px;
+
+    &.ant-btn-sm {
+      padding: 3px 0;
+    }
+
+    &.ant-btn-default:not(.ant-btn-dangerous) {
+      color: #8F92A8;
+
+      &:hover {
+        color: $primary,
+      }
+    }
+  }
+
+  &.primary {
+    background-image: $bg-primary;
+    overflow: hidden;
+    border-color: transparent;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: $bg-primary-hover;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    span, svg {
+      position: relative;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.secondary {
+    background: $bg-secondary;
+    border-color: transparent;
+    color: $primary;
+
+    &:hover {
+      color: #fff;
+      background: $primary;
+    }
+  }
+
+  &.success {
+    background: #069306;
+    border-color: transparent;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      background: #22b322;
+      border-color: transparent;
+    }
+  }
+
+  &.btnWithIcon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    & span + svg {
+      margin: 0 0 0 12px;
+    }
+
+    & svg + span {
+      margin: 0 0 0 12px;
+    }
+  }
+
+  &.btnCircle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+  }
+}
+
+:global(.ant-btn.ant-btn-sm) {
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px 14px;
+  height: auto;
+}
+
+.linkBtn {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover {
+    color: $primary;
+  }
+
+  &.btnWithIcon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    & span + svg {
+      margin: 0 0 0 12px;
+    }
+
+    & svg + span {
+      margin: 0 0 0 12px;
+    }
+  }
+}
+
+.danger {
+  background: $danger;
+  overflow: hidden;
+  border-color: transparent;
+  color: #fff;
+
+  &:hover {
+    background: #d30000;
+    color: #fff !important;
+    border-color: transparent !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 18px;
+    line-height: 1.1;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+  }
+}

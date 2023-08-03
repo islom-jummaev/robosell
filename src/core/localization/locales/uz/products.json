@@ -1,0 +1,14 @@
+{
+  "title": "Maxsulotlar",
+  "created": "Maxsulot yaratildi",
+  "deleted": "Maxsulot olib tashlandi",
+  "positionChanged": "Lavozim yangilandi",
+  "create": "Maxsulot Yaratish",
+  "about_product": "Maxsulot haqida",
+  "add_units": "Siz kamida bitta o'lchov birligini qo'shishingiz kerak",
+  "status": {
+    "unlimited": "Cheksiz",
+    "limited": "Cheklangan",
+    "not_available": "Mavjud emas"
+  }
+}

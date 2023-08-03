@@ -1,0 +1,52 @@
+@use "sass:map";
+
+.input {
+  padding-left: 14px;
+  padding-right: 14px;
+  background: #F4F4FB;
+}
+
+.password {
+  padding: 0;
+  border: none;
+
+  input:global(.ant-input) {
+    padding-left: 14px;
+    padding-right: 14px;
+    border: 1px solid #6662F4;
+    border-radius: 16px;
+    transition: all 0.2s;
+  }
+
+  &:global(.ant-input-affix-wrapper-status-error) {
+    input:global(.ant-input) {
+      border-color: #ff4d4f;
+    }
+  }
+
+  span:global(.ant-input-suffix) {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+:global(.custom-input.search) {
+  :global(.ant-input) {
+    background: none;
+  }
+
+  :global(.searchIcon) {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  :global(.ant-input-prefix) {
+    margin-right: 27px;
+  }
+}

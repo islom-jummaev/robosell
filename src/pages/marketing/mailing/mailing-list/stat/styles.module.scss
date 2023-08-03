@@ -1,0 +1,12 @@
+@use "sass:map";
+
+.statWr {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+
+  & > div {
+    width: 250px;
+  }
+}
